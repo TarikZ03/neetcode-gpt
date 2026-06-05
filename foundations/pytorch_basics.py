@@ -22,7 +22,7 @@ class Solution:
         # Join two tensors side-by-side along dim=1
         # Use torch.cat((a, b), dim=1)
         
-        #dim removes that dimension, so that can be joined together
+        #think of dim=1 acting as disolving the closing bracket of the matrix so more cols can fit in there, since it is side-by-side concat (horizontal), the number of rows must match
         return torch.cat((cat_one, cat_two), dim=1)
 
     def get_loss(self, prediction: TensorType[float], target: TensorType[float]) -> TensorType[float]:
