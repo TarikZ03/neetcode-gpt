@@ -29,6 +29,7 @@ class Solution:
             y = gamma * x_hat + beta
 
 
+            #exponential moving average, 1-m=0.9 if m=0.1 so you keep 90% of the old running mean and only add 10% of the new running mean 
             run_mean = (1-momentum) * running_mean + momentum * x_mean
             run_var = (1-momentum) * running_var + momentum * x_var
         
